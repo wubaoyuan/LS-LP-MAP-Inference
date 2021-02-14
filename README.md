@@ -2,7 +2,8 @@
 
 
 
-## Basic idea
+## Introduction
+This repository provides the implementations using Python and Matlab for our IJCV 2020 work ["MAP Inference via L2-Sphere Linear Program Reformulation"](https://link.springer.com/article/10.1007/s11263-020-01313-2). 
 
 Maximum a posteriori (MAP) inference is an important task for graphical models, which aims to infer the most probable label configuration of a probabilistic graphical mode (e.g, MRF). MAP inference can be reformulated as an integer linear program (ILP) as following: 
 $$ \text{MAP}(\boldsymbol{\theta}) = \text{ILP}(\boldsymbol{\theta}) = \mathop{\max}_{\boldsymbol{\mu}, \boldsymbol{v}} < \boldsymbol{\theta}, \boldsymbol{\mu} > ~ \quad \text{s.t.} \quad \boldsymbol{\mu} \in \mathcal{L}_G \cap {0, 1}^{|\boldsymbol{\mu}|}. $$
@@ -16,11 +17,11 @@ It can be proved that $ \text{LS-LP}(\boldsymbol{\theta}) = \text{MAP}(\boldsymb
 <img src="/figure/factor-graph.png" width="500"/>
 </div>
 
-## Implementation
+## Implementations
 
 #### Python
 
-- parameter choices
+- Parameter options
 
 ``` 
 rho_initial: [5e-2, 1e-1, 1e0, 5e0, 1e1, 1e2, 1e3, 1e4]
@@ -32,7 +33,7 @@ dataset_name: ['Grids', 'inpainting4', 'inpainting8', 'scene', 'Segmentation']
 file_index: the index of uai file that you want to read and test. Range of index is determined by number of uai files
 ```
 
-- demo
+- Demo
 
 ```
 python run.py \
@@ -49,7 +50,7 @@ python run.py \
 
 #### Matlab
 
-- parameter choices
+- Parameter options
 
 ```
 Illustration of input variables: rho_initial: {5e-2, 1e-1, 1e0, 5e0, 1e1, 1e2, 1e3, 1e4}
@@ -61,7 +62,7 @@ dataset_name: {'Grids', 'inpainting4', 'inpainting8', 'scene', 'Segmentation'}
 file_index: the index of uai file that you want to read and test. Range of index is determined by number of uai files.
 ```
 
-- demo
+- Demo
 
 ```
 run(5e-2, 1.01, 1e6, 500, 'linear-proximal', 'Grids', 1)
@@ -83,6 +84,11 @@ If our work is helpful to your work, please cite as follows.
   publisher={Springer}
 }
 ```
+
+## [Acknowledgement](#acknowledgement)
+[[back to top](#)]
+
+I would like to thank my RAs Wei Sun and Longkang Li for their contributions to the re-organization of Matlab code and the implementation of Python. 
 
 
 
