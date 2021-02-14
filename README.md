@@ -73,6 +73,7 @@ run(5e-2, 1.01, 1e6, 500, 'linear-proximal', 'Grids', 1)
 ## Citation
 
 If our work is helpful to your work, please cite as follows. 
+If any question or suggestion, plesse [send email](mailto:wubaoyuan@cuhk.edu.cn) to [Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/home).
 
 ```
 @article{wu2020map,
